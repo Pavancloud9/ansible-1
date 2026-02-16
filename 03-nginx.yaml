@@ -5,7 +5,7 @@
   - name: Install nginx
     ansible.builtin.package:
       name: nginx
-      state: present
+      state: absent
   - name: start nginx service
     ansible.builtin.service:
       name: nginx
