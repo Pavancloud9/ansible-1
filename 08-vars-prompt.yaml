@@ -4,6 +4,7 @@
   vars_prompt:
   - name: COURSE
     prompt: "please enter the Course name"
+    private: false
   tasks:
   - name: print the variables values from files
     ansible.builtin.debug:
