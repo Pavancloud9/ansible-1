@@ -2,7 +2,13 @@
   hosts: local
   connection: local
   vars:
-    GREET: "PLAY LEVEL"  #### PLAY LEVEL VARIABLES 
+    GREET: "PLAY LEVEL"  #### PLAY LEVEL VARIABLES
+  vars_files:
+  - variables-file.yaml
+  vars_prompt:
+  - name: GREET
+    prompt: "Enter the value"
+    private: no
   tasks:
   - name: variables from args
     # vars:
