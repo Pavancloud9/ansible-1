@@ -2,7 +2,7 @@
   hosts: local
   connection : local
   vars_prompt:
-  - name: gndgn
+  - name: COURSE
     prompt: "please enter the Course name"
   tasks:
   - name: print the variables values from files
