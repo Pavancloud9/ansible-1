@@ -3,7 +3,7 @@
   connection : local
   vars_prompt:
   - name: COURSE
-    prompt: "please enter the username"
+    prompt: "please enter the Course name"
   tasks:
   - name: print the variables values from files
     ansible.builtin.debug:
