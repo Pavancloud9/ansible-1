@@ -3,7 +3,7 @@
   connection: local
   vars:
     COURSE: "DevOps with aws"  ### STRING
-    DURATION: 120
+    DURATION: 120  ### NUMBER 
     TOPICS:   ### LIST
     - linux
     - shell
