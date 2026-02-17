@@ -2,8 +2,10 @@
   hosts: local
   connection: local
   vars:
-    GREET: "Hello from PLAY LEVEL"  #### PLAY LEVEL VARIABLES 
+    GREET: "PLAY LEVEL"  #### PLAY LEVEL VARIABLES 
   tasks:
   - name: variables from args
+    vars:
+      GREET: "TASK LEVEL"
     ansible.builtin.debug:
       msg: "Hello from {{ GREET }}"
