@@ -1,4 +1,4 @@
-- name: filers
+- name: filters
   hosts: web1
   tasks:
   - name: handle undefined variable
