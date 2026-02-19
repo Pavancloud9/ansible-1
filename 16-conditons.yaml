@@ -5,12 +5,12 @@
   - name: install nginx if rhel
     ansible.builtin.dnf:
       name: nginx
-      state: installed
+      state: absent
     when: ansible_os_family == "REDHAT"
 
   - name: Install nginx if ubuntu
     ansible.builtin.apt:
       name: nginx
-      state: installed
+      state: absent
     when: ansible_os_family == "Debian"
   
