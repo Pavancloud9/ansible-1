@@ -7,3 +7,8 @@
   
   - name: execute ls command in command module
     ansible.builtin.command: ls -ltr
+    register: COMMAND_RESULT
+  
+  - name: print the ls -ltr output
+    ansible.builtin.debug:
+      msg: {{ COMMAND_RESULT }}
