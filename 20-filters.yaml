@@ -7,7 +7,7 @@
 #       msg: "Hello {{ person | default('sai') }}"
       
 
-- name: convert string to list
+- name: convert string to list     ##### STRING TO LIST FILTER
   hosts: web1
   tasks:
   - name: string to list
