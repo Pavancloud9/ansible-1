@@ -1,0 +1,12 @@
+- name: Install packages using loops
+  hosts: web1
+  become: yes
+  tasks:
+  - name: Install packages
+    ansible.builtin.package:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop:
+    - { name: 'nginx', state: 'installed' }
+    - { name : 'git', state: 'absent'}
+    
