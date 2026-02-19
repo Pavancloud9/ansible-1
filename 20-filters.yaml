@@ -7,12 +7,8 @@
       msg: "Hello {{ person | default('sai') }}"
       
 
-- name: filtersss
-  hosts: local
-  connection: local
-  tasks:
   - name: string to list
     vars:
       FRUITS: "apple, banana, orange"
     ansible.builtin.debug:
-      msg: "fruits are {{ FRUITS | split(',') }}"
+      msg: "Fruits are {{ FRUITS | split(',') }}"
