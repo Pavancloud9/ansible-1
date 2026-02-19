@@ -11,4 +11,4 @@
   
   - name: print the ls -ltr output
     ansible.builtin.debug:
-      msg: {{ COMMAND_RESULT }}
+      msg: "{{ COMMAND_RESULT }}"
