@@ -15,8 +15,18 @@
 
   - name: Map to list
     vars:
-      COURSE:
+      COURSE:   
         name: ansible
         duration: 120HRS
     ansible.builtin.debug:
       msg: "Course info: {{ COURSE | dict2items }}"
+
+  - name: LIST TO MAP
+    vars:
+      COURSE:
+      - key: ansible
+        value: 120HRS
+      - key: terraform
+        value: 100hrs
+    ansible.builtin.debug:
+      msg: "Course info is {{ COURSE | items2dict }}"
