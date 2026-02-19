@@ -7,6 +7,10 @@
       msg: "Hello {{ person | default('sai') }}"
       
 
+- name: filtersss
+  hosts: local
+  connection: local
+  tasks:
   - name: string to list
     vars:
       FRUITS: "apple, banana, orange"
