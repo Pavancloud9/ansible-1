@@ -7,8 +7,16 @@
       msg: "Hello {{ person | default('sai') }}"
       
 
-  - name: string to list
+  - name: string to list    #### STRING TO LIST
     vars:
       FRUITS: "apple, banana, orange"
     ansible.builtin.debug:
-      msg: "Fruits are {{ FRUITS | split(',') }}"
+      msg: "Fruits are {{ FRUITS | split(',') }}" 
+
+  - name: Map to list
+    vars:
+      COURSE:
+        name: ansible
+        duration: 120HRS
+    ansible.builtin.debug:
+      msg: "Course info: {{ COURSE | dict2items }}"
