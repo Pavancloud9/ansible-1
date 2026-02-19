@@ -1,15 +1,12 @@
-# - name: filers
-#   hosts: web1
-#   connection: local
-#   tasks:
-#   - name: handle undefined variable
-#     ansible.builtin.debug:
-#       msg: "Hello {{ person | default('sai') }}"
+- name: filers
+  hosts: web1
+  connection: local
+  tasks:
+  - name: handle undefined variable
+    ansible.builtin.debug:
+      msg: "Hello {{ person | default('sai') }}"
       
 
-- name: convert string to list     ##### STRING TO LIST FILTER
-  hosts: web1
-  tasks:
   - name: string to list
     vars:
       FRUITS: "apple, banana, orange"
