@@ -1,5 +1,6 @@
 - name: filters
-  hosts: web1
+  hosts: local
+  connection: local
   tasks:
   - name: handle undefined variable
     ansible.builtin.debug:
