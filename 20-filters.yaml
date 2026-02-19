@@ -30,3 +30,9 @@
         value: 100hrs
     ansible.builtin.debug:
       msg: "Course info is {{ COURSE | items2dict }}"
+
+  - name: check ip address is valid or not
+    vars:
+      IP: 12.25.25.36
+    ansible.builtin.debug:
+      msg: "{{ IP | ansible.utils.ipaddr }}"
