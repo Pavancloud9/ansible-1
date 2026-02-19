@@ -4,4 +4,4 @@
   tasks:
   - name: handle undefined variable
     ansible.builtin.debug:
-      mag: "Hello {{ person | default('sai') }}"
+      mag: "Hello {{ person | default(sai) }}"
