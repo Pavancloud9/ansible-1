@@ -1,0 +1,8 @@
+- name: Create directory
+  hosts: local
+  connection: local
+  tasks:
+    - name: Create directory
+      ansible.builtin.file:
+        path: /app
+        state: directory
