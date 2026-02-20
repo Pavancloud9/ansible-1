@@ -1,6 +1,7 @@
 - name: Create directory
   hosts: local
   connection: local
+  become: yes
   tasks:
     - name: Create directory
       ansible.builtin.file:
